@@ -311,15 +311,19 @@ async function sendEnhancedTgNotification(settings, type, clientIp, additionalDa
       const ipInfo = await response.json();
       if (ipInfo.status === 'success') {
         locationInfo = `
-*国家:* \`${ipInfo.country || 'N/A'}\`
-*地区:* \`${ipInfo.regionName || 'N/A'}\`
-*城市:* \`${ipInfo.city || 'N/A'}\`
-*区:* \`${ipInfo.district}\`
-*邮编:* \`${ipInfo.zip'}\`
-*Asname:* \`${ipInfo.asname}\`
-*ISP:* \`${ipInfo.org || 'N/A'}\`
-*ASN:* \`${ipInfo.as || 'N/A'}\``;
-      }
+                        *国家:* \`${ipInfo.country || 'N/A'}\`
+                        *地区:* \`${ipInfo.regionName || 'N/A'}\`
+                        *城市:* \`${ipInfo.city || 'N/A'}\`
+                        *区:* \`${ipInfo.district || 'N/A'}\`
+                        *邮编:* \`${ipInfo.zip || 'N/A'}\`
+                        *经纬度*: \`${ipInfo.lat || 'N/A' ,ipInfo.lon || 'N/A'}\`
+                        *Asname:* \`${ipInfo.asname || 'N/A'}\`
+                        *ISP:* \`${ipInfo.org || 'N/A'}\`
+                        *ASN:* \`${ipInfo.as || 'N/A'}\`
+                        *网络:* \`${ipInfo.mobile || 'N/A'}\`
+                        *代理:* \`${ipInfo.proxy || 'N/A'}\`
+                        *托管中心:* \`${ipInfo.hosting || 'N/A'}\`
+                        `;}
     }
   } catch (error) {
     // 获取IP位置信息失败，忽略错误
