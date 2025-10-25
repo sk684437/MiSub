@@ -314,9 +314,9 @@ async function sendEnhancedTgNotification(settings, type, clientIp, additionalDa
 *国家:* \`${ipInfo.country || 'N/A'}\`
 *地区:* \`${ipInfo.regionName || 'N/A'}\`
 *城市:* \`${ipInfo.city || 'N/A'}\`
-*区:* \`${ipInfo.district || 'N/A'}\`
-*邮编:* \`${ipInfo.zip || 'N/A'}\`
-*Asname:* \`${ipInfo.asname || 'N/A'}\`
+*区:* \`${ipInfo.district}\`
+*邮编:* \`${ipInfo.zip'}\`
+*Asname:* \`${ipInfo.asname}\`
 *ISP:* \`${ipInfo.org || 'N/A'}\`
 *ASN:* \`${ipInfo.as || 'N/A'}\``;
       }
